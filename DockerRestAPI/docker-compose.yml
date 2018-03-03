@@ -24,7 +24,7 @@ services:
 
     command: python -u app.py
     ports:
-      - "5003:5000"
+      - "5002:5000"
     volumes:
       - ./DockerMongo:/todo
     links:

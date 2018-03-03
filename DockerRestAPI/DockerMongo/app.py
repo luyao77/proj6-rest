@@ -102,12 +102,14 @@ def _calc_times():
     result = {"open": open_time, "close": close_time}
     return flask.jsonify(result=result)
 
-
+@app.route("/favicon.ico")
+def favicon():
+    return flask.render_template('calc.html')
 
 @app.errorhandler(404)
 def page_not_found(error):
     app.logger.debug("Page not found")
-    flask.session['linkback'] = flask.url_for("index")
+    # flask.session['linkback'] = flask.url_for("index")
     return flask.render_template('404.html'), 404
 
 if __name__ == "__main__":
