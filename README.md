@@ -54,5 +54,12 @@ times. For examples, see below.
 
 * Consumer in different container.
 
+## How to start 
+
+* use docker-compose build 
+* use docker-compose up 
+* default port for the calculator : 5002
+* default port for the php : 5000
+* default port for the api : 5001 
 
 
